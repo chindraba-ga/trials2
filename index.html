@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="viewport-fit=contain, width=device-width, height=device-height, initial-scale=1.0">
+  <meta name="author" content="Chindraba (Ronald Lamoreaux)">
+  <title>Ronald Lamoreaux Final Project (FEWDR)</title>
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/final-project.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+  <!--
+      Copies of this project can be found on:
+        GitHub: https://github.com/chindraba-ga/fewd-final-project
+          The wireframes are included.
+        GitLab: https://gitlab.com/chindraba-ga/fewd-final-project
+          The wireframes are included.
+        General Assembly GitHub: https://git.generalassemb.ly/chindraba-ga/fewd-final-project
+          The wireframes are included.
+        CodeSandbox: https://codesandbox.io/s/final-project-fewdr-804-h8qde
+          The wireframes are included.
+        Live Web: https://www.chindraba.work/fewd/fewd-final.html
+          The wireframes are at https://www.chindraba.work/fewd/fewd-final-wireframes.pdf
+  -->
+</head>
+<body>
+  <input class="hidden-control" type="checkbox" id="widescreen" ><!-- checked="true" -->
+  <!-- hidden menu controls, show menu when checked -->
+  <input class="hidden-control" type="checkbox" id="site-nav-control"> <!-- Other pages within the sight -->
+  <input class="hidden-control" type="checkbox" id="page-nav-control"> <!-- Table of contents for the page -->
+  <input class="hidden-control" type="checkbox" id="archive-nav-control"> <!-- Archive menu for the site -->
+  <input class="hidden-control" type="checkbox" id="settings-control"> <!-- The menu of page settings: color scheme, dark mode, and font size -->
+  <input class="hidden-control" type="checkbox" id="scheme-control"> <!-- The menu for changing the color scheme -->
+  <!-- Keeping track of the chosen light/dark mode. pairs with the browser request, if any and defaults to dark mode -->
+  <input class="hidden-control" type="radio" name="dark-mode-selector" id="main-mode" checked="true">
+  <input class="hidden-control" type="radio" name="dark-mode-selector" id="alt-mode">
+  <!-- Keeping track of the chosen color scheme -->
+  <input class="hidden-control" type="radio" name="scheme-selector" id="default-scheme" checked="true">
+  <input class="hidden-control" type="radio" name="scheme-selector" id="solarized-scheme">
+  <input class="hidden-control" type="radio" name="scheme-selector" id="earthtone-theme">
+  <input class="hidden-control" type="radio" name="scheme-selector" id="purpleish-theme">
+  <input class="hidden-control" type="radio" name="scheme-selector" id="redwasrad-theme">
+  <input class="hidden-control" type="radio" name="scheme-selector" id="blueskies-theme">
+  <!-- Keeping track of the current font size, relative to the base -->
+  <input class="hidden-control" type="radio" name="font-sizes" id="font-size-1"> <!-- .562em,  8.99px -->
+  <input class="hidden-control" type="radio" name="font-sizes" id="font-size-2"> <!-- .680em, 10.89px -->
+  <input class="hidden-control" type="radio" name="font-sizes" id="font-size-3"> <!-- .825em, 13.20px -->
+  <input class="hidden-control" type="radio" name="font-sizes" id="font-size-4" checked="true"> <!-- Default -->
+  <input class="hidden-control" type="radio" name="font-sizes" id="font-size-5"> <!-- 1.31em, 21px -->
+  <input class="hidden-control" type="radio" name="font-sizes" id="font-size-6"> <!-- 1.75em, 28px -->
+  <input class="hidden-control" type="radio" name="font-sizes" id="font-size-7"> <!-- 2.25em, 36px -->
+  <div id="scheme-container">
+    <!-- Keeping track of the active modal, if any, modal-x is none -->
+    <input class="hidden-control" checked="true" type="radio" name="modal_state" id="modal-x">
+    <input class="hidden-control modal-activate" type="radio" name="modal_state" id="modal-1">
+    <input class="hidden-control modal-activate" type="radio" name="modal_state" id="modal-2">
+    <input class="hidden-control modal-activate" type="radio" name="modal_state" id="modal-3">
+    <input class="hidden-control modal-activate" type="radio" name="modal_state" id="modal-4">
+    <header id="site-header">
+      <div>
+<label for="widescreen">
+        <img src="assets/logo.png" alt="">
+</label>
+      </div>
+      <div>
+        <div id="site-header-title">
+          <div>Web Site Title</div>
+          <div>Descriptive Web Site Tagline</div>
+        </div>
+        <nav id="head-nav" class="side-menu">
+          <ul id="head-nav-left">
+            <li>About</li>
+            <li>Portfolio</li>
+            <li>Blog</li>
+          </ul>
+          <ul id="head-nav-right">
+            <li>References</li>
+            <li>Reviews</li>
+            <li>Legal</li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <label for="site-nav-control" id="site-nav-switch">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+    </header>
+    <section id="hero-box">
+    </section>
+    <main id="page-content">
+      <aside class="nav-box" id="page-nav-box">
+        <div>
+          <label class="nav-box-switch" for="page-nav-control" id="page-nav-switch"><span>&#x25b6;</span></label>
+        </div>
+        <nav id="page-nav" class="side-menu">
+          <ul id="page-nav-menu">
+            <li>Section 1</li>
+            <li><ul>Section 2
+                <li> Subsection 2.1 </li>
+                <li> Subsection 2.2 </li>
+            </ul><li>
+            <ul>Section 3
+              <li> Subsection 3.1 </li>
+            </ul><li>
+              Section 4
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <aside class="nav-box" id="archive-nav-box">
+        <div>
+          <label class="nav-box-switch" for="archive-nav-control" id="archive-nav-switch"><span>&#x25c0;</span></label>
+        </div>
+        <nav id="archive-nav" class="side-menu">
+          <ul id="archive-nav-menu">
+            <li><ul>Article year 1
+                <li>Article 1</li>
+                <li>Article 2</li>
+            </ul></li>
+            <li><ul>Article year 2
+                <li>Article 3</li>
+                <li>Article 4</li>
+                <li>Article 5</li>
+            </ul></li>
+            <li><ul>Article year 3
+                <li>Article 6</li>
+                <li>Article 7</li>
+            </ul></li>
+            <li><ul>Article year 4
+                <li>Article 8</li>
+                <li>Article 9</li>
+                <li>Article 10</li>
+            </ul></li>
+          </ul>
+        </nav>
+      </aside>
+      PAGE CONTENT
+    </main>
+    <footer id="site-footer">
+      <div id="copyright">
+        Copyright © 2020 Chindraba
+      </div>
+      <aside id="settings-menu">
+        <div>
+          <label class="icon" for="settings-control" id="settings-switch">&#x2699;</label>
+        </div> 
+        <section id="view-settings">
+          <div>
+            <label class="icon font-switch" for="font-size-2" id="font-up-2">&#x1f5da;</label>
+            <label class="icon font-switch" for="font-size-3" id="font-up-3">&#x1f5da;</label>
+            <label class="icon font-switch" for="font-size-4" id="font-up-4">&#x1f5da;</label>
+            <label class="icon font-switch" for="font-size-5" id="font-up-5">&#x1f5da;</label>
+            <label class="icon font-switch" for="font-size-6" id="font-up-6">&#x1f5da;</label>
+            <label class="icon font-switch" for="font-size-7" id="font-up-7">&#x1f5da;</label>
+          </div>
+          <div>
+            <label class="icon font-switch" for="font-size-1" id="font-dn-1">&#x1f5db;</label>
+            <label class="icon font-switch" for="font-size-2" id="font-dn-2">&#x1f5db;</label>
+            <label class="icon font-switch" for="font-size-3" id="font-dn-3">&#x1f5db;</label>
+            <label class="icon font-switch" for="font-size-4" id="font-dn-4">&#x1f5db;</label>
+            <label class="icon font-switch" for="font-size-5" id="font-dn-5">&#x1f5db;</label>
+            <label class="icon font-switch" for="font-size-6" id="font-dn-6">&#x1f5db;</label>
+          </div>
+          <div>
+            <label for="scheme-control" id="scheme-switch"><span class="icon">&#xa66e;</span></label>
+            <div id="scheme-options">
+              <label for="default-scheme" id="default-scheme-switch">Default</label>
+              <label for="solarized-scheme" id="solarized-scheme-switch">Solarized</label>
+              <label for="earthtone-scheme" id="earthtone-scheme-switch">Earth Tone</label>
+              <label for="purpleish-scheme" id="purpleish-scheme-switch">Purple-ish</label>
+              <label for="redwasrad-scheme" id="redwasrad-scheme-switch">Red was Rad</label>
+              <label for="blueskies-scheme" id="blueskies-scheme-switch">Blue Skies</label>
+              <label for="scheme-control" id="scheme-accept">Accept</label>
+            </div>
+          </div>
+          <div>
+            <label for="main-mode" id="main-mode-switch">
+              <span class="icon" id="main-is-dark">&#x263e;</span>
+              <span class="icon" id="main-is-lite">&#x2600;</span>
+            </label>
+            <label for="alt-mode" id="alt-mode-switch">
+              <span class="icon" id="alt-is-dark">&#x263d;</span>
+              <span class="icon" id="alt-is-lite">&#x2600;</span>
+            </label>
+          </div>
+        </section>
+      </aside>
+    </footer>
+    <!-- All the positionable menus -->
+    <aside id="modal-layouts">
+      <label for="modal-x" id="modal-cover">
+        <label class="modal-box" for="" id="modal-dialog-1"><p></p><label class="modal-button" for="modal-x"></label></label>
+        <label class="modal-box" for="" id="modal-dialog-2"><p></p><label class="modal-button" for="modal-x"></label></label>
+        <label class="modal-box" for="" id="modal-dialog-3"><p></p><label class="modal-button" for="modal-x"></label></label>
+        <label class="modal-box" for="" id="modal-dialog-4"><p></p><label class="modal-button" for="modal-x"></label></label>
+      </label>
+    </aside>
+  </div>
+  <!--
+    25b2 Symbola Up Dark
+    25b3 Symbola Up Lite
+    25b6 Symbola Left Dark
+    25b7 Symbola Left Lite
+    25bc Symbola Down Dark
+    25bd Symbola Down Lite
+    25c0 Symbola Right Dark
+    25c1 Symbola Right Lite
+    2b88 Circled Left
+    2b89 Circled Up
+    2b8a Circled Right
+    2b8b Circled Down
+    2b98 3D-Left
+    2b99 3D-Up
+    2b9a 3D-Right
+    2b9b 3D-Down
+  -->
+  <script src="js/final-project.js"></script>
+</body>
+</html>
